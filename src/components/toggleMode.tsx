@@ -22,7 +22,7 @@ export default function ToggleNav({toggleStyle, toggle}: Props ) {
              <a href='#index.html'>
                 <img src={!toggle ? Logo : WhiteLogo} alt='logo'/>
              </a>
-             <button onClick={() => toggleStyle(!toggle)}
+             <button onClick={() => toggleStyle(!toggle)} className='cursor-pointer'
               style={{background: toggle ? '#4f5561' : '#eeeef0' ,width: '40px', display: 'inline-block', borderRadius: '7px'}}>
                 <img src={toggle ? Sun : Moon} alt='toggle'  />
              </button>

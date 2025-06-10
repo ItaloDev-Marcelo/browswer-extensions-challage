@@ -114,3 +114,23 @@ ul  > .tab {
 
 
 
+
+.mode 
+article {
+  background: var(--Neutral-0);
+}
+
+.mode
+article:hover {
+ background: var(--Neutral-100);
+}
+
+.mode.dark
+article {
+  background: var(--Neutral-800);
+}
+
+.mode.dark
+article:hover {
+  background: var(--Neutral-700);
+}
