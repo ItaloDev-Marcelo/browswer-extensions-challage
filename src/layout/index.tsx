@@ -47,12 +47,13 @@ export default function ManagerDeskboard() {
     }
 
 
+    
+
+
 
     return (
-        <>
-
-        <ToggleNav toggleStyle={toggleStyle} toggle={toggle} />
-
+        <div className={toggle ? 'mode dark' : 'mode'}>
+            <ToggleNav toggleStyle={toggleStyle} toggle={toggle} />
         <Tabar SelectOptions={SelectOptions} activeNavItem={activeNavItem} />
           <main>
             {
@@ -65,6 +66,6 @@ export default function ManagerDeskboard() {
             })
           }
           </main>
-        </>
+        </div>
     )
 }
