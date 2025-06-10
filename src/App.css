@@ -35,7 +35,7 @@ button > img {
 .mode {
   background: var(--Light-Gradient);
     min-width: 100vw;
-  height: 100%;
+  height: 100vh;
   /* padding: 0 1em; */
   
   padding: 2em;
@@ -133,4 +133,11 @@ article {
 .mode.dark
 article:hover {
   background: var(--Neutral-700);
+}
+
+
+@media (min-width: 1440px) {
+  article {
+    width: 400px;
+  }
 }
