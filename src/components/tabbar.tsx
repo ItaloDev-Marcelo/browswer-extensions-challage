@@ -6,7 +6,7 @@ type Props = {
 
 export default function Tabar({SelectOptions, activeNavItem}: Props) {
     return (
-         <div className="flex flex-col justify-center text-center 
+         <div className="flex flex-col justify-center my-7 md:my-0 text-center 
          md:flex-row md:items-center md:justify-between md:mx-15 ">
             <h1 className="my-4 text-[2.2em] font-semibold">Extensions List</h1>
             <nav>
