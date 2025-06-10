@@ -64,16 +64,53 @@ button > img {
   color: var(--Neutral-100);
 }
 
-ul  > li {
+ul  > .tab {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 45px;
   height: 35px;
-  background-color: red;
+  background-color: var(--Neutral-0);
+  border: 1px solid rgb(228, 225, 225);
   border-radius: 25px;
 }
 
-li:nth-of-type(2), li:nth-of-type(3) {
+.tab:nth-of-type(2), .tab:nth-of-type(3) {
   width: 75px;
 }
+
+.mode 
+.tab:hover {
+ border: 1px solid hsl(3, 86%, 64%);
+}
+
+
+.mode.mode.dark
+.tab:hover {
+ border: 1px solid  hsl(225, 23%, 24%);
+ background: #525868;
+ color: var(--Neutral-100);
+}
+
+
+
+.mode 
+.tab.active {
+  background-color: var(--Red-400);
+  color: var(--Neutral-100);
+}
+
+.mode.dark .tab {
+  background-color: #2f354b;
+   border: 1px solid  hsl(225, 23%, 24%);
+   color: var(--Neutral-0);  
+}
+
+.mode.dark .tab.tab.active {
+  background-color: var(--Red-500);
+  color: var(--Neutral-800);
+   border: 1px solid  hsl(225, 23%, 24%);
+}
+
+
+

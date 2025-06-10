@@ -11,13 +11,16 @@ type CardType = {
 
 export default function Card({logo,name,description,isActive, handleSelectActive} :CardType) {
     return (
-        <article>
-              <div>
-                  <figure>
+        <article className="w-[340px] h-[210px] md:w-[250px] lg:w-[385px] 
+         bg-yellow-500 xl:w-[377px] rounded-[7px] p-3 ">
+              <div className="flex flex-row">
+                  <figure className='pr-2 md:pr-3'>
                       <Img url={logo} alt={name} />
                   </figure>
-                  <h3>{name}</h3>
+                 <div className="py-2 px-3 w-[75%]  ">
+                     <h3>{name}</h3>
                   <p>{description}</p>
+                 </div>
               </div>
               <div>
                  <button>Remove</button>

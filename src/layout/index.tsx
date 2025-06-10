@@ -55,7 +55,10 @@ export default function ManagerDeskboard() {
         <div className={toggle ? 'mode dark' : 'mode'}>
             <ToggleNav toggleStyle={toggleStyle} toggle={toggle} />
         <Tabar SelectOptions={SelectOptions} activeNavItem={activeNavItem} />
-          <main>
+          <main className='grid grid-cols-1 gap-y-[5]
+           md:grid-cols-2 gap-5  md:gap-5
+           xl:grid-cols-3 xl:gap-3
+          md:mx-14  px-2'>
             {
             data.map((item, index) => {
                 const {logo,name,description,isActive} = item
