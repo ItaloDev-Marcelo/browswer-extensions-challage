@@ -10,7 +10,7 @@ export default function Tabar({SelectOptions, activeNavItem}: Props) {
          md:flex-row md:items-center md:justify-between md:mx-15 ">
             <h1 className="my-4 text-[2.2em] font-semibold">Extensions List</h1>
             <nav>
-                <ul className="flex justify-evenly md:w-[270px] ">
+                <ul className="flex justify-evenly md:w-[270px] xl:-pl-2 ">
                     <li className={activeNavItem === 'all' ? 'tab active' : 'tab'} onClick={() => SelectOptions('all')}><a href="#">All</a></li>
                     <li className={activeNavItem === 'active' ? 'tab active' : 'tab'}  onClick={() => SelectOptions('active')}><a href="#">Active</a></li>
                     <li className={activeNavItem === 'inactive' ? 'tab active' : 'tab'}  onClick={() => SelectOptions('inactive')}><a href="#">Inactive</a></li>
