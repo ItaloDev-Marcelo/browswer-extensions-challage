@@ -28,6 +28,24 @@ body {
   font-variation-settings:"wdth" 100;
 }
 
+.mode.dark
+button {
+  border: 1px solid hsl(217, 61%, 90%);
+  color: var(--Neutral-200);
+}
+
+
+.mode
+button {
+  border: 1px solid hsl(217, 61%, 90%);
+  color: var(--Neutral-800);
+}
+
+
+button:hover, button:active {
+  background-color: var(--Neutral-300);
+}
+
 button > img {
   margin: 0 auto;
 }
@@ -38,7 +56,7 @@ button > img {
   height: 100vh;
   /* padding: 0 1em; */
   
-  padding: 2em;
+  padding: 1em;
 }
 
 .mode h1, .mode h2, .mode h3 {
@@ -133,6 +151,29 @@ article {
 .mode.dark
 article:hover {
   background: var(--Neutral-700);
+}
+
+
+@media (min-width: 768px) {
+   .mode {
+  padding: .7em;
+}
+
+}
+
+
+@media (min-width: 1366px) {
+  article{
+    width: 375px;
+  }
+}
+
+
+@media (min-width: 1280px) {
+   .mode {
+  padding: 2em;
+}
+
 }
 
 
