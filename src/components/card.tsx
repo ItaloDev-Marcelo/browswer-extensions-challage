@@ -1,4 +1,5 @@
 import Img from "./image";
+import { motion } from "framer-motion";
 
 type CardType = {
     logo: string,
@@ -11,10 +12,14 @@ type CardType = {
 
 export default function Card({logo,name,description,isActive, handleSelectActive} :CardType) {
     return (
-        <article className="w-[100%] py-5 h-[230px] md:w-[100%] 
-        md:h-[auto] lg:w-[100%] lg:h-[220px] 
-     xl:w-[345px] xl:h-[210px] rounded-[7px] 
-     md:p-4 shadow-sm cursor-pointer">
+        <motion.article
+        initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.4,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
+        className="w-[100%] py-5 h-[230px] md:w-[100%] md:h-[auto] lg:w-[100%] lg:h-[220px] xl:w-[345px] xl:h-[210px] rounded-[7px] md:p-4 shadow-sm cursor-pointer">
               <div className="flex flex-row justify-baseline px-4 xl:px-1">
                   <figure className='pr-2 mt-3 md:pr-3'>
                       <Img url={logo} alt={name} />
@@ -34,6 +39,6 @@ export default function Card({logo,name,description,isActive, handleSelectActive
                     </label>
                  </div>
               </div>
-        </article>
+        </motion.article>
     )
 }

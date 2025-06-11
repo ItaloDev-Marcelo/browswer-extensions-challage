@@ -1,10 +1,10 @@
-import {useState } from "react"
+import {useEffect, useState } from "react"
 import ManagerData from '../layout/data'
 import Card from "../components/card"
 import Tabar from "../components/tabbar";
 import ToggleNav from "../components/toggleMode";
 
-
+import { motion } from "framer-motion";
 
 
 export default function ManagerDeskboard() {
@@ -13,6 +13,7 @@ export default function ManagerDeskboard() {
     const [defaultData, setDefaultData] = useState(ManagerData)
     const [toggle, setToggle] = useState(true)
     const [activeNavItem, setActiveNavItem] = useState('active');
+    const [bgStyle, setBgStyle] = useState('');
 
     const handleSelectActive = (id:string) => {
         const update = data.map((item) => {
@@ -22,6 +23,10 @@ export default function ManagerDeskboard() {
         setData(update)
         setDefaultData(update)
     }
+
+    useEffect(() => {
+      setBgStyle(!toggle ? 'linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)' : 'linear-gradient(180deg, #040918 0%, #091540 100%)' )
+    }, [toggle])
 
     const option2 = defaultData.map(ActiveOtions => ActiveOtions).filter(IsActiveOtions => IsActiveOtions.isActive === true)
     const option3 = defaultData.map(notActiveOptions => notActiveOptions).filter(notActiveOptions => notActiveOptions.isActive === false)
@@ -52,8 +57,11 @@ export default function ManagerDeskboard() {
 
 
     return (
-        <div className={toggle ? 'mode dark' : 'mode'}>
-            <ToggleNav toggleStyle={toggleStyle} toggle={toggle} />
+        <motion.div
+         animate={{background: bgStyle }}
+         transition={{duration: 0.4}}
+         className={toggle ? 'mode dark' : 'mode'}>
+           <ToggleNav toggleStyle={toggleStyle} toggle={toggle} />
         <Tabar SelectOptions={SelectOptions} activeNavItem={activeNavItem} />
           <main className='grid grid-cols-1 gap-y-[5] mt-2 md:my-4
            md:grid-cols-2 gap-5  md:gap-5
@@ -69,6 +77,6 @@ export default function ManagerDeskboard() {
             })
           }
           </main>
-        </div>
+        </motion.div>
     )
 }
