@@ -29,6 +29,11 @@ body {
   font-variation-settings:"wdth" 100;
 }
 
+h1 {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
 
 h3 {
   font-size: 1.3em;
@@ -145,6 +150,8 @@ ul  > .tab {
 .mode 
 article {
   background: var(--Neutral-0);
+  
+ border: 1px solid hsla(0, 0%, 78%, 0.541);
 }
 
 .mode
