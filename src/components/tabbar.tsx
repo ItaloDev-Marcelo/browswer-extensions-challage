@@ -1,10 +1,10 @@
 
-type Props = {
+type TabProps = {
     SelectOptions : (optionName: string) => void,
     activeNavItem: string
 }
 
-export default function Tabar({SelectOptions, activeNavItem}: Props) {
+export default function Tabar({SelectOptions, activeNavItem}: TabProps) {
     return (
          <div className="flex flex-col justify-center my-7 md:my-0 text-center 
          md:flex-row md:items-center md:justify-between md:mx-15 ">

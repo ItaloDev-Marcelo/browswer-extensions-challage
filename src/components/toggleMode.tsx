@@ -3,7 +3,7 @@ import Sun from '../assets/images/icon-sun.svg';
 import Logo from '../assets/images/logo.svg'
 import WhiteLogo from '../assets/images/white.svg'
 
-type Props = {
+type NavProps = {
     toggle: boolean,
     toggleStyle: (toggle: boolean) => void
 }
@@ -11,7 +11,7 @@ type Props = {
 
 
 
-export default function ToggleNav({toggleStyle, toggle}: Props ) {
+export default function ToggleNav({toggleStyle, toggle}: NavProps ) {
 
 
 

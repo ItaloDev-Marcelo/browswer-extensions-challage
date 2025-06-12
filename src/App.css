@@ -1,6 +1,7 @@
 
 * {
   overflow-x: hidden;
+  font-size: 100%;
 }
 
 
@@ -26,6 +27,12 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings:"wdth" 100;
+}
+
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 700;
 }
 
 .mode.dark
@@ -54,9 +61,8 @@ button > img {
   background: var(--Light-Gradient);
     min-width: 100vw;
   height: 100vh;
-  /* padding: 0 1em; */
-  
-  padding: 1em;
+   padding: 1em .7em;
+  /* padding: 1em .5em; */
 }
 
 .mode h1, .mode h2, .mode h3 {
@@ -97,9 +103,12 @@ ul  > .tab {
   width: 75px;
 }
 
+
+
 .mode 
 .tab:hover {
  border: 1px solid hsl(3, 86%, 64%);
+ transform: scale(0.9);
 }
 
 
@@ -146,6 +155,7 @@ article:hover {
 .mode.dark
 article {
   background: var(--Neutral-800);
+  border: 1px solid #c7c7c7a1;
 }
 
 .mode.dark
@@ -203,7 +213,7 @@ input:checked + .slider::before {
 
 @media (min-width: 768px) {
    .mode {
-  padding: .7em;
+   padding: 1em .4em;
 }
 }
 
