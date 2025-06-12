@@ -19,8 +19,10 @@ export default function Card({logo,name,description,isActive, handleSelectActive
                 duration: 0.4,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
-        className="w-[100%] py-5 h-[230px] md:w-[100%] md:h-[auto] lg:w-[100%] lg:h-[220px] xl:w-[345px] xl:h-[210px] rounded-[7px] md:p-4 shadow-sm cursor-pointer">
-              <div className="flex flex-row justify-baseline px-1 xl:px-1">
+        className="w-[100%] py-5 h-[230px] md:w-[100%] md:h-[auto] 
+        lg:w-[100%] lg:h-[220px] xl:w-[345px] xl:h-[210px] rounded-[7px]
+         md:p-4 shadow-sm cursor-pointer">
+              <div className="flex flex-row justify-baseline pl-7 md:px-2 xl:px-1">
                   <figure className='pr-2 mt-3 md:pr-3'>
                       <Img url={logo} alt={name} />
                   </figure>
